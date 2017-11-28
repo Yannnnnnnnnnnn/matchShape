@@ -15,9 +15,11 @@ addons:
       - libjpeg-dev
       - libtiff-dev
       - libopencv-dev
-
-script:
-  - mkdir build
+      
+before_script:
+  - sudo mkdir build
   - cd build
   - cmake ..
+  
+script:
   - make -j4
