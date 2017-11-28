@@ -6,10 +6,15 @@ matrix:
     - os: linux
       compiler: gcc
       sudo: required
-      addons:
-        apt:
-          packages:
-            -libopencv-dev
+      
+addons:
+  apt:
+    packages:
+      - cmake
+      - libpng-dev
+      - libjpeg-dev
+      - libtiff-dev
+      - libopencv-dev
 
 script:
   - mkdir build
