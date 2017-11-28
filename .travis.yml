@@ -1,0 +1,17 @@
+language:cpp
+
+matrix:
+  include:
+    - os: linux
+      compiler: gcc
+      sudo: required
+      addons:
+        apt:
+          packages:
+            -libopencv-dev
+
+script:
+  - mkdir build
+  - cd build
+  - cmake ..
+  - make -j4
