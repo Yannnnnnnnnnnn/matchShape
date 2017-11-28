@@ -11,15 +11,10 @@ addons:
   apt:
     packages:
       - cmake
-      - libpng-dev
-      - libjpeg-dev
-      - libtiff-dev
       - libopencv-dev
-      
-before_script:
+       
+script:
   - sudo mkdir build
   - cd build
-  - cmake ..
-  
-script:
+  - cmake .. 
   - make -j4
