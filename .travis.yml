@@ -21,4 +21,4 @@ before_script:
   - cmake . ${TRAVIS_BUILD_DIR}
  
 script:
-  - make -j4
+  - make
