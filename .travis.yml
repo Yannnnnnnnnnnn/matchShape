@@ -1,20 +1,24 @@
 dist: trusty
 language: cpp
+sudo: false
 
 matrix:
   include:
     - os: linux
       compiler: gcc
-      sudo: required
+      
       
 addons:
   apt:
     packages:
       - cmake
       - libopencv-dev
-       
-script:
-  - sudo mkdir build
+ 
+before_script:
+  - cmake --version
+  - mkdir build
   - cd build
-  - cmake .. 
+  - cmake . ${TRAVIS_BUILD_DIR}
+ 
+script:
   - make -j4
